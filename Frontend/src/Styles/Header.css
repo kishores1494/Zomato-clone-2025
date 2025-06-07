@@ -1,0 +1,170 @@
+/* Global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F5F5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Container */
+.headerbor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #4DA8DA; /* primary color */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.logo-hed-m {
+  display: flex;
+  align-items: center;
+}
+
+.logo-hed {
+  width: 120px;
+  height: auto;
+}
+
+/* User Account Buttons */
+.user-account {
+  display: flex;
+  gap: 15px;
+}
+
+.user-account button {
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: white;
+}
+
+/* Login Button */
+.user-account button:first-child {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.user-account button:first-child:hover {
+  background-color: #6cccb4;
+  transform: scale(1.05);
+}
+
+/* Create/Logout Button */
+.user-account button:last-child {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.user-account button:last-child:hover {
+  background-color: #6cccb4;
+  transform: scale(1.05);
+}
+
+/* Login Modal Overlay */
+.ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.4) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.ReactModal__Content {
+  width: 600px;
+  height: auto;
+  padding: 30px;
+  margin: 15px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.ReactModal__Content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4DA8DA;
+}
+
+/* Modal Form */
+.ReactModal__Content form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.ReactModal__Content input {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 50px;
+  width: 500px;
+}
+
+/* Modal Buttons */
+.ReactModal__Content button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ReactModal__Content button:first-child {
+  background: #4DA8DA;
+  color: white;
+  width: 100px;
+  margin-left: 150px;
+}
+
+.ReactModal__Content button:first-child:hover {
+  background: #3c94c5;
+  transform: scale(1.05);
+}
+
+.ReactModal__Content button:last-child {
+  background: #FFD66B;
+  color: #333;
+  width: 100px;
+}
+
+.ReactModal__Content button:last-child:hover {
+  background: #f3c456;
+  transform: scale(1.05);
+}
+
+/* Google Login Button (override default Google styles if needed) */
+button[aria-label="Sign in with Google"] {
+  width: 600px;
+  margin-top: 15px;
+  border-radius: 8px !important;
+}
+.home-button {
+  background-color: #FFFFFF; 
+  color: #000000; 
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #FFFFFF; 
+}

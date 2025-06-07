@@ -1,0 +1,39 @@
+/* FilterPagination.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  background: #FFFFFF; /* Main Background */
+  padding: 10px 0;
+}
+
+button {
+  background: #FE4C55; /* Button 1 background (Highlighted background) */
+  color: #FFFFFF;      /* Button 1 text (Highlighted text) */
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:disabled {
+  background: #FEF4E2; /* Button 2 background */
+  color: #000000;      /* Button 2 text */
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button:hover:not(:disabled) {
+  background: #DD393D; /* Slightly darker red for hover */
+}
+
+span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000; /* Heading */
+}

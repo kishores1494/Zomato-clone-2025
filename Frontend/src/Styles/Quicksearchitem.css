@@ -1,0 +1,74 @@
+.QSMborder {
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF; /* Main background */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  color: #000000; /* Default text color */
+}
+
+.QSMborder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.QSborder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Image styling */
+img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 2px solid #DDDDDD; /* Icons border */
+}
+
+/* Heading */
+.text h3 {
+  margin: 8px 0 4px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000; /* Heading */
+}
+
+/* Highlighted background box for heading (if needed) */
+.text h3.highlighted {
+  background-color: #FE4C55;
+  color: #FFFFFF;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* Subheading text */
+.text h5 {
+  margin: 0;
+  font-size: 14px;
+  color: #A5A5A5; /* Subheading */
+}
+
+/* Divider */
+hr {
+  width: 60%;
+  margin: 10px auto;
+  border: 0;
+  border-top: 1px solid #DDDDDD; /* Icons (line) */
+}
+
+/* Example for icon text styling */
+.icon-text {
+  color: #000000; /* Icons text */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .QSMborder {
+    width: 90%;
+  }
+}

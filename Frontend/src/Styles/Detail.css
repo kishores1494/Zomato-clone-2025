@@ -1,0 +1,170 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+/* Main Container */
+.Detailbor {
+  width: 1000px;
+  max-width: 1444px;
+  margin: 40px auto;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* position: relative; */
+  z-index: 1;
+}
+
+/* Restaurant Image */
+.detailimg {
+  width: auto;
+  height: 350px;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* Buttons (general, modal, close) */
+button,
+.modal ul li button,
+.close-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #FE4C55;
+  color: #FFFFFF;
+}
+
+button:hover,
+.modal ul li button:hover,
+.close-btn:hover {
+  background-color: #e03c45;
+}
+
+/* Tabs */
+.tabs {
+  margin-top: 20px;
+}
+
+.heading,
+.head {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.content,
+.value {
+  font-size: 18px;
+  color: #A5A5A5;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed ;
+  margin: 25px;
+  top: 0 ;
+  left: 0 ;
+  width: 100vw ;
+  height: 100vh ;
+  background: transparent ; /* 🔴 Red background for debugging */
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  z-index: 2147483647 ;
+}
+.placeorder{
+  display: flex;
+  justify-self: right;
+}
+.placeorder button{
+  background-color: #FFC941;
+  color: #391145;
+}
+
+
+/* Modal Content */
+.modal {
+  display: block;
+  margin-left: 20%;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  justify-items:center;
+  justify-self: center;
+  opacity: 1;
+  background-color: #FFFFFF ;
+  padding: 20px;
+  width: 800px ;
+  height: 600px;
+  /* max-width: 800px ; */
+  border-radius: 10px ;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) ;
+  /* max-height: 80vh ; */
+  overflow-y: auto ;
+  z-index: 2147483648 ;
+}
+.menu{
+  display: flex;
+}
+/* Modal Header */
+.modal h3 {
+  color: #000000;
+  
+
+}
+
+/* Close Button */
+.close-btn {
+  /* margin-bottom: 20px; */
+  height: 40px;
+  width: 100px;
+  
+}
+
+/* Menu List */
+.modal ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #DDDDDD;
+  color: #000000;
+}
+
+.modal ul li button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin: 10px;
+}
+.order{
+  display: flex;
+  
+}
+/* SVG Styling */
+svg {
+  width: 100%;
+  height: auto;
+  fill: #DDDDDD;
+}
+.gallery{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.pay{
+  display: flex;
+  justify-self: center;
+  
+}

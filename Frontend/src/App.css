@@ -1,0 +1,110 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading styles */
+h1 {
+  color: #dc3545;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #dc3545;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #c82333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #343a40;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+/* Card styles */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  .btn {
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+
+  .navbar a {
+      padding: 8px 15px;
+  }
+}

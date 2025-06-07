@@ -1,0 +1,87 @@
+/* Section background and styling */
+.section {
+  padding: 20px;
+  background-color: #FEF4E2; /* Main background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h2 {
+  margin: 20px;
+  color: #FE4C55; /* Heading color */
+  text-align: center;
+  /* font-size: 24px; */
+  margin-bottom: 8px;
+}
+
+h3 {
+  margin: 20px;
+  color: #000000; /* Subheading text */
+  text-align: center;
+  /* font-size: 16px; */
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+/* QuickSearch boxes container */
+.qs-boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* QuickSearchItem box styling */
+.qs-box {
+  flex: 1 1 220px;
+  background: #ffffff; /* Card background */
+  color: #000000; /* Text color */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.qs-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* QuickSearchItem text styles */
+.qs-box-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000; /* Title text color */
+  margin-bottom: 8px;
+}
+
+.qs-box-desc {
+  font-size: 14px;
+  color: #000000; /* Description text color */
+  line-height: 1.4;
+}
+
+/* Link styles */
+.qs-box a {
+  color: #FE4C55; /* Link color */
+  text-decoration: none;
+}
+
+.qs-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .qs-boxes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qs-box {
+    width: 90%;
+  }
+}

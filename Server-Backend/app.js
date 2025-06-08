@@ -15,6 +15,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://zc-frontend-5nqwb3ll0-kishores-projects-431a402e.vercel.app",
+      "https://zomato-clone-kishore.vercel.app"
     ],
     methods: ["GET", "POST"],
     credentials: true,
@@ -40,13 +41,5 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-// // 🚀 Export app for Vercel serverless function
-=======
-// 🚀 Export app for Vercel serverless function
->>>>>>> Stashed changes
-=======
-// 🚀 Export app for Vercel serverless function
->>>>>>> Stashed changes
+
 // module.exports = app;

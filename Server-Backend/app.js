@@ -41,7 +41,11 @@ app.listen(PORT, () => {
 });
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // // 🚀 Export app for Vercel serverless function
+=======
+// 🚀 Export app for Vercel serverless function
+>>>>>>> Stashed changes
 =======
 // 🚀 Export app for Vercel serverless function
 >>>>>>> Stashed changes

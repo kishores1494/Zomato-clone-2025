@@ -33,6 +33,9 @@ app.use("/payment", require("./routes/paymentRoutes"));
 app.use("/auth", require("./routes/authRoutes"));
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
+// });
+
+// 🚀 Export app for Vercel serverless function
+module.exports = app;

@@ -10,6 +10,8 @@ import FilterPagination from "./FilterPagination";
 import withLocation from "../withLocation";
 import withNavigate from "../withNavigate";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 class Filter extends React.Component {
   constructor(props) {
     super(props);
@@ -39,7 +41,7 @@ class Filter extends React.Component {
     }
 
     axios
-      .get("http://localhost:5000/locations")
+      .get(`${backendUrl}/locations`)
       .then((res) => this.setState({ locations: res.data.locations }))
       .catch((err) => console.log("Error fetching locations:", err));
   }
@@ -60,7 +62,7 @@ class Filter extends React.Component {
     };
 
     axios
-      .post("http://localhost:5000/filter", payload)
+      .post(`${backendUrl}/filter`, payload)
       .then((res) => {
         const restaurants = res.data?.restaurants || [];
         const uniqueCuisines = [];

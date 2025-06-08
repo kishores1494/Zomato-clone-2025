@@ -7,6 +7,8 @@ import { useLocation } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 const withLocation = (Component) => (props) => {
   const location = useLocation();
 
@@ -60,7 +62,7 @@ class Details extends React.Component {
 
     axios({
       method: "GET",
-      url: `http://localhost:5000/restaurants/${restaurantId}`,
+      url: `${backendUrl}/restaurants/${restaurantId}`,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
@@ -80,7 +82,7 @@ class Details extends React.Component {
     }
 
     axios
-      .get(`http://localhost:5000/menu/${restaurantId}`)
+      .get(`${backendUrl}/menu/${restaurantId}`)
 
       .then((response) => {
         this.setState(
@@ -108,7 +110,7 @@ class Details extends React.Component {
     const restaurantId = qs.restaurantId;
 
     axios
-      .post("http://localhost:5000/orders", {
+      .post(`${backendUrl}/orders`, {
         restaurant_id: restaurantId,
         item_name: item.name,
         price: item.price,
@@ -194,7 +196,7 @@ class Details extends React.Component {
     alert("✅ Order is placed for payment!");
   };
   getData = (data) => {
-    return fetch(`http://localhost:5000/payment`, {
+    return fetch(`${backendUrl}/payment`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -218,7 +220,7 @@ class Details extends React.Component {
     };
 
     axios
-      .post("http://localhost:5000/payment/paynow", paymentData)
+      .post(`${backendUrl}/payment/paynow`, paymentData)
       .then((response) => {
         const { orderId, amount, key, customerId } = response.data;
         const options = {

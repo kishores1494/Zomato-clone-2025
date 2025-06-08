@@ -4,6 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { logo } from "../../assets/assets";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 const withNavigate = (Component) => (props) => {
   const navigate = useNavigate();
   return <Component {...props} navigate={navigate} />;
@@ -22,9 +24,10 @@ class Wallpaper extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/locations")
+      .get(`${backendUrl}/locations`)
       .then((res) => {
-        this.setState({ locations: res.data.locations });
+        console.log("Location API response:", res.data);
+        this.setState({ locations: res.data.locations || [] });
       })
       .catch((err) => console.log("Error fetching locations:", err));
   }
@@ -35,7 +38,7 @@ class Wallpaper extends React.Component {
 
     axios
       .get(
-        `http://localhost:5000/restaurants/filter/restaurants?locationId=${locationId}`
+        `${backendUrl}/restaurants/filter/restaurants?locationId=${locationId}`
       )
       .then((response) => {
         this.setState({

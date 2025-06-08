@@ -4,6 +4,8 @@ import QuickSearch from "../Quicksearch/QuickSearch";
 import axios from "axios";
 import "../../Styles/Home.css";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 class Home extends React.Component {
   constructor() {
     super();
@@ -16,7 +18,7 @@ class Home extends React.Component {
     sessionStorage.clear();
     axios({
       method: "GET",
-      url: "http://localhost:5000/locations",
+      url: `${backendUrl}/locations`,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
@@ -25,7 +27,7 @@ class Home extends React.Component {
       .catch((err) => console.log(err));
     axios({
       method: "GET",
-      url: "http://localhost:5000/mealtypes",
+      url: `${backendUrl}/mealtypes`,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
@@ -41,6 +43,7 @@ class Home extends React.Component {
         <Wallpaper locationData={locations} />
 
         <QuickSearch quicksearchData={mealtypes} />
+        {/* <QuickSearch/> */}
       </div>
     );
   }

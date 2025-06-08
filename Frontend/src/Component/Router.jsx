@@ -6,7 +6,7 @@ import Filter from "../Component/Filter/Filter";
 import Quicksearch from "./Quicksearch/QuickSearch";
 import Details from "./Details/Details";
 import Header from "../Component/Header/Header";
-// import '../Styles/Router.css';
+
 
 function Router() {
   return (

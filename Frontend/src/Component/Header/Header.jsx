@@ -6,6 +6,7 @@ import { jwtDecode } from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 
 const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const customStyles = {
   content: {
@@ -85,7 +86,7 @@ class Header extends React.Component {
   handleGoogleLoginSuccess = async (credentialResponse) => {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
-      const res = await fetch("http://localhost:5000/auth/google", {
+      const res = await fetch(`${backendUrl}/auth/google`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token: credentialResponse.credential }),

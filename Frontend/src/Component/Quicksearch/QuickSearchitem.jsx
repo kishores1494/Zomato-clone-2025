@@ -11,6 +11,8 @@ import "../../Styles/QuickSearchitem.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 const QuickSearchitemWrapper = (props) => {
   const navigate = useNavigate();
   return <QuickSearchitem {...props} navigate={navigate} />;
@@ -29,7 +31,7 @@ class QuickSearchitem extends React.Component {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/filter",
+        `${backendUrl}/filter`,
         filterData,
         {
           headers: { "Content-Type": "application/json" },

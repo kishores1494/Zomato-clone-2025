@@ -285,6 +285,7 @@ class Details extends React.Component {
     return (
       <>
         <div className="Detailbor">
+          <h3>Details of Restaurants</h3>
           <div className="gallery">
             <img
               className="detailimg"

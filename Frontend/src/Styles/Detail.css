@@ -168,3 +168,94 @@ svg {
   justify-self: center;
   
 }
+@media (max-width: 1024px) {
+  .Detailbor {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .detailimg {
+    height: 250px;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .order {
+    flex-direction: column;
+  }
+
+  .placeorder {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading,
+  .head {
+    font-size: 20px;
+  }
+
+  .content,
+  .value {
+    font-size: 16px;
+  }
+
+  button,
+  .modal ul li button,
+  .close-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .detailimg {
+    height: 200px;
+  }
+  .placeorder{
+    display: flex;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .Detailbor {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .modal {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .detailimg {
+    width: 100%;
+    height: 180px;
+    margin: 5px 0;
+    padding: 5px;
+  }
+
+  .gallery {
+    margin: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .pay {
+    flex-direction: column;
+    align-items: center;
+  }
+  .placeorder{
+    display: flex;
+    justify-self: center;
+  }
+}

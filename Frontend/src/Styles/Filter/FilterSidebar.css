@@ -66,3 +66,49 @@
 .reset-btn:hover {
   background-color: #d63c44; /* Darker red for hover effect */
 }
+
+@media (max-width: 720px) {
+  .leftbox {
+    display: none; /* Hide sidebar on mobile by default */
+  }
+
+  .leftbox.active {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #FEF4E2;
+    position: absolute;
+    top: 60px; /* adjust as per your header */
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .reset-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+.filter-toggle-btn {
+  display: none;
+  background-color: #FE4C55;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+} 
+
+@media (max-width: 720px) {
+  .filter-toggle-btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
+

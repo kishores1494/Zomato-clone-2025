@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "../../Styles/Filter/FilterSidebar.css";
 const FilterSidebar = ({
   locations,
@@ -12,8 +12,18 @@ const FilterSidebar = ({
   handleSortChange,
   resetFilters,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen((prev) => !prev);
+  };
   return (
-    <div className="leftbox">
+    <>
+        
+        <button className="filter-toggle-btn" onClick={toggleSidebar}>
+        {isOpen ? "Close Filters" : "Show Filters"}
+      </button>
+    <div className={`leftbox ${isOpen ? "active" : ""}`}>
       <h3>Filter</h3>
 
       <p>Select Location</p>
@@ -80,7 +90,7 @@ const FilterSidebar = ({
       <button onClick={resetFilters} className="reset-btn">
         Reset Filters
       </button>
-    </div>
+    </div></>
   );
 };
 

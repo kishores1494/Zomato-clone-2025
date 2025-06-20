@@ -37,3 +37,20 @@ span {
   font-weight: bold;
   color: #000000; /* Heading */
 }
+@media (max-width: 1024px) {
+  .pagination {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}

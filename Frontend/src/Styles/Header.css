@@ -168,3 +168,79 @@ button[aria-label="Sign in with Google"] {
 .home-button:hover {
   background-color: #FFFFFF; 
 }
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .headerbor {
+    padding: 10px 20px;
+  }
+
+  .logo-hed {
+    width: 100px;
+  }
+
+  .user-account button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .ReactModal__Content {
+    width: 90%;
+  }
+
+  .ReactModal__Content input {
+    width: 100%;
+  }
+
+  button[aria-label="Sign in with Google"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerbor {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .user-account {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .user-account button {
+    flex: 1;
+    padding: 8px 10px;
+  }
+
+  .ReactModal__Content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-hed {
+    width: 80px;
+  }
+
+  .home-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .user-account {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .ReactModal__Content h2 {
+    font-size: 20px;
+  }
+
+  .ReactModal__Content button:first-child,
+  .ReactModal__Content button:last-child {
+    width: 100%;
+    margin-left: 0;
+  }
+}

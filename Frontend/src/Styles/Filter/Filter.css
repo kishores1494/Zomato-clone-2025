@@ -99,3 +99,21 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 720px) {
+  .bigbox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .filter-results {
+    width: 100%;
+  }
+
+  .filter-pagination {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+}

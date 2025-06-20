@@ -1,4 +1,6 @@
                                                                     🍽️ Zomato Clone
+🌐 Live Demo
+            👉 Visit https://zomato-clone-kishore.vercel.app/
 
 A full-stack Zomato-like food ordering app built using React, Node.js, Express, MongoDB, and Razorpay.
 
@@ -43,8 +45,7 @@ Payment: Razorpay
 ![9](https://github.com/user-attachments/assets/72c3bbfb-fe15-4b10-8089-3a17a6627d63)
 ![10](https://github.com/user-attachments/assets/83bde7f4-cdae-4833-9031-5671e978d0f9)
 
-🌐 Live Demo
-            👉 Visit https://zomato-clone-kishore.vercel.app/
+
 
 Alternate domains:
 

@@ -56,10 +56,6 @@ zc-frontend-9lc6ta8yl-kishores-projects-431a402e.vercel.app
 ⚙️ How to Run Locally
 bash
 Copy code
-# Clone the repo
-git clone https://github.com/yourusername/zomato-clone.git
-
-cd zomato-clone
 
 # Backend
 npm install

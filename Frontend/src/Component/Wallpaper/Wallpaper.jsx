@@ -3,6 +3,8 @@ import "../../Styles/Wallpaper.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { logo } from "../../assets/assets";
+import Cookies from 'js-cookie';
+
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -34,7 +36,9 @@ class Wallpaper extends React.Component {
 
   handleLocation = (event) => {
     const locationId = event.target.value;
-    sessionStorage.setItem("locationId", locationId);
+    // sessionStorage.setItem("locationId", locationId);
+    Cookies.set("locationId", locationId, { expires: 7 }); // persists for 7 days
+    console.log("Cookie set:", Cookies.get("locationId"));
 
     axios
       .get(

@@ -9,6 +9,8 @@ import FilterPagination from "./FilterPagination";
 
 import withLocation from "../withLocation";
 import withNavigate from "../withNavigate";
+import { ClipLoader } from "react-spinners";
+import Cookies from 'js-cookie';
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -26,11 +28,15 @@ class Filter extends React.Component {
       sort: 1,
       page: 1,
       displayedCuisines: [],
+      loading: true,
     };
   }
 
   componentDidMount() {
-    const storedLocationId = sessionStorage.getItem("locationId");
+    // const storedLocationId = sessionStorage.getItem("locationId");
+    const locationId = Cookies.get("locationId");
+console.log("Location ID from cookie:", locationId);
+    const storedLocationId = Cookies.get("locationId");
     const { location } = this.props;
 
     if (location && location.search) {
@@ -50,6 +56,7 @@ class Filter extends React.Component {
     const { mealtype, location, selectedCuisines, lcost, hcost, sort, page } =
       this.state;
     if (!mealtype) return;
+    this.setState({ loading: true });
 
     const payload = {
       mealtype,
@@ -80,6 +87,7 @@ class Filter extends React.Component {
         this.setState({
           restaurants,
           displayedCuisines: uniqueCuisines,
+          loading: false,
         });
       })
       .catch((err) => {
@@ -150,12 +158,19 @@ class Filter extends React.Component {
       hcost,
       sort,
       page,
+      loading,
     } = this.state;
 
     return (
       <div className="border">
         <h1>BREAKFAST PLACES</h1>
-
+        {loading ? (
+        <div className="loader-container">
+          <ClipLoader color="#ff5a5f" loading={true} size={50} />
+          <p>Loading restaurants...</p>
+        </div>
+      ) : (
+        <>
         <div className="bigbox">
           <FilterSidebar
             locations={locations}
@@ -177,6 +192,8 @@ class Filter extends React.Component {
           page={page}
           handlePageChange={this.handlePageChange}
         />
+        </>
+      )}
       </div>
     );
   }

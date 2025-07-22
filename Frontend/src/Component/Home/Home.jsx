@@ -15,7 +15,7 @@ class Home extends React.Component {
     };
   }
   componentDidMount() {
-    sessionStorage.clear();
+    // sessionStorage.clear();
     axios({
       method: "GET",
       url: `${backendUrl}/locations`,

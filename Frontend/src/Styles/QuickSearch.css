@@ -73,6 +73,14 @@ h3 {
 .qs-box a:hover {
   text-decoration: underline;
 }
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
 
 /* Responsive design */
 @media screen and (max-width: 768px) {

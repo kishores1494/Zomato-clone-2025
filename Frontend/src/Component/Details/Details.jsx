@@ -6,6 +6,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { ClipLoader } from "react-spinners";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -260,7 +261,18 @@ class Details extends React.Component {
     const { restaurant, loading, error, activeTab } = this.state;
 
     if (loading) {
-      return <div>Loading...</div>; // Simple loading indicator
+      return (    <div className="loader-container" style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "80vh",
+      }}>
+        <ClipLoader color="#ff5a5f" loading={true} size={60} />
+        <p style={{ marginTop: "20px", fontSize: "18px", color: "#555" }}>
+          Loading restaurant details...
+        </p>
+      </div>)
     }
 
     if (error) {

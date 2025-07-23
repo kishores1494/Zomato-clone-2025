@@ -37,10 +37,15 @@ app.use("/orders", require("../routes/orderRoutes"));
 app.use("/payment", require("../routes/paymentRoutes"));
 app.use("/auth", require("../routes/authRoutes"));
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.use((req, res, next) => {
+  console.log(`Incoming request: ${req.method} ${req.url}`);
+  next();
 });
+
+// Start server
+// app.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
+// });
 
 
 module.exports = app;
